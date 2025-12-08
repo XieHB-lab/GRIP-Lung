@@ -22,6 +22,7 @@ cd GRIP-Lung
 pip install torch torchvision torchaudio
 pip install numpy pandas scikit-learn matplotlib
 Make sure you have Python ≥ 3.8 and PyTorch ≥ 2.0 installed.
+---
 ## Usage
 Place your dataset files (p-lung.csv and p-drug.csv) in a directory, e.g., E:\data\geo_data.
 Update file paths in the script:
@@ -32,6 +33,7 @@ python cgan_gene_expression.py
 Results:
 CV Metrics: Printed per fold and averaged across folds.
 Bar Plot: Saved as cv_gan_artifacts/metrics_barplot.png.
+---
 ## Model Architecture
 FiLM Residual Generator
 Input: Pre-treatment gene expression (x_gene), cell ID, drug ID.
@@ -41,6 +43,7 @@ Output: Predicted post-treatment gene expression.
 Lightweight MLP Discriminator
 Input: Gene expression, cell ID, drug ID.
 Predicts the probability of a gene expression profile being real or generated.
+---
 ## Notes
 Small datasets may lead to overfitting; consider augmenting data.
 GPU is recommended for faster training.
